@@ -1,3 +1,17 @@
+vim.o.cursorlineopt ='number,line'
+vim.cmd [[
+
+   augroup ilikecursorline
+      autocmd VimEnter * :highlight CursorLine guibg=#282a2e
+   augroup END
+
+]]
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  pattern = { "*" },
+  command = "highlight link CursorLine CursorColumn",
+})
+
 -- Enable clipboard support
 vim.opt.clipboard = 'unnamedplus'
 

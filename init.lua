@@ -1,3 +1,19 @@
+vim.cmd [[
+
+   augroup ilikecursorline
+      autocmd VimEnter * :highlight CursorLine guibg=#282a2e
+   augroup END
+
+]]
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  pattern = { "*" },
+  command = "highlight link CursorLine CursorColumn",
+})
+
+
+
+
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 vim.opt.termguicolors = true

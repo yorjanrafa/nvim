@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-	theme = "pastelDark",
+	theme = "tundra",
 	tabufline = {
 		enabled = false
 	}
