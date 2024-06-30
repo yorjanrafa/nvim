@@ -95,3 +95,4 @@ vim.api.nvim_create_autocmd('BufNewFile', {
       vim.opt_local.autoindent = true
     end
   })
+
